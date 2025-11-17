@@ -1,0 +1,139 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Таблица-контейнер */
+table {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+td {
+    padding: 40px 30px;
+    text-align: center;
+    vertical-align: middle;
+    height: 350px;
+    position: relative;
+}
+
+/* Градиентные фоны блоков */
+.block1 {
+    background: linear-gradient(135deg, #4CAF50 20%, #2E7D32 100%);
+}
+.block2 {
+    background: linear-gradient(135deg, #2196F3 20%, #1565C0 100%);
+}
+.block3 {
+    background: linear-gradient(135deg, #f44336 20%, #C62828 100%);
+}
+.block4 {
+    background: linear-gradient(135deg, #9C27B0 20%, #6A1B9A 100%);
+}
+.block5 {
+    background: linear-gradient(135deg, #FF9800 20%, #E65100 100%);
+}
+
+/* Заголовки */
+h1, h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Меню и ссылки */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 22px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Эффект для ссылок при наведении */
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: left 0.4s ease;
+}
+
+.menu a:hover::before {
+    left: 0;
+}
+
+.menu a:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.menu a:focus {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+
+.menu a:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Текст в блоках */
+p {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 400;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Картинка */
+img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
